@@ -21,3 +21,9 @@ export interface Order {
     customerId: number;
     orderDate: string;
 }
+
+export interface Customer {
+    customerId?: string;
+    name: string;
+    email: string;
+  }
