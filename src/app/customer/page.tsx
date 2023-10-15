@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import axiosInstance from '@/services/axiosInstance'
+import axiosInstance from '@/_services/axiosInstance'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { Customer } from '@/types/dto'
 import Image from 'next/image'

@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-import axiosInstance from '@/services/axiosInstance'
+import axiosInstance from '@/_services/axiosInstance'
 import { Order, Brand } from '@/types/dto'
 import Link from 'next/link'
 import Image from 'next/image'

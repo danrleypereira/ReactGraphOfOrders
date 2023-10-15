@@ -2,8 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Category, Product, Brand } from '@/types/dto'
-import axiosInstance from '@/services/axiosInstance'
-// import Link from 'next/link'
+import axiosInstance from '@/_services/axiosInstance'
 
 export default function Brand() {
   const [categories, setCategories] = useState<Category[]>([])
@@ -40,7 +39,7 @@ export default function Brand() {
   }, [selectedProduct])
 
   return (
-    <div className='min-h-screen max-w-screen'>
+    <div className='min-h-screen max-w-screen min-w-screen'>
       <h1 className='text-center text-lg font-semibold text-slate-800'>Brand list</h1>
       <div className="flex justify-center">
         <div className=' m-10'>
@@ -51,6 +50,9 @@ export default function Brand() {
             onChange={(e) => setSelectedCategory(Number(e.target.value))}
             className="mb-4 mx-4 p-2 border-2  border-r-4 border-cyan-200"
           >
+            <option key={"category.categoryId"} value="">
+                {" "}
+              </option>
             {categories.map((category) => (
               <option key={category.categoryId} value={category.categoryId}>
                 {category.categoryName}
@@ -66,6 +68,9 @@ export default function Brand() {
             onChange={(e) => setSelectedProduct(Number(e.target.value))}
             className="mb-4 mx-4 p-2 border-2  border-r-4 border-cyan-200"
           >
+            <option key="product.productId" value="">
+                {" "}
+              </option>
             {products.map((product) => (
               <option key={product.productId} value={product.productId}>
                 {product.productName}
