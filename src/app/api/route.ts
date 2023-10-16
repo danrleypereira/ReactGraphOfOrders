@@ -1,4 +1,4 @@
-import axiosInstance from "@/services/axiosInstance"
+import axiosInstance from "@/_services/axiosInstance"
 import { Category } from "@/types/dto";
 import { NextResponse } from "next/server";
 
